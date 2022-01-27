@@ -1229,8 +1229,8 @@ ${z}📂 ${prefix}nsfwmenu${z} | Menu +18
 ${z}📂 ${prefix}animemenu${z} | Menu de anime
 ┗━━━━━━━━━━━━━━━━━`
 buttons = [
-{buttonId:`scbot`, buttonText: {displayText: ''}, type: 1},
-{buttonId:`owner`, buttonText: {displayText: ''}, type: 1}
+{buttonId:`scbot`, buttonText: {displayText: 'Script'}, type: 1},
+{buttonId:`owner`, buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const menuu = {
     contentText: `${tod}`,
