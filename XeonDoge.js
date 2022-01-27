@@ -3362,7 +3362,7 @@ sendMediaURL(from,`${res.result.link}`,`${res.result.desc}`)
 										axios.get(`https://tinyurl.com/api-create.php?url=${nowm}`)
 										.then(async (a) => {
                                                                                         let meno = await getBuffer(nowm)
-											me = `*Link* : ${a.data}`
+											me = ``
 											alpha.sendMessage(from,meno,MessageType.video,{mimetype:'video/mp4',quoted: mek, caption:me})
 											})
 										}).catch((err) => reply(`Invalid link`))
