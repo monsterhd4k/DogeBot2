@@ -2907,7 +2907,7 @@ break
         if (!q) return reply("The link?");
         if (!isUrl(args[0]) && !args[0].includes("facebook.com"))
           return reply(mess.Iv);
-        reply(mess.wait);
+        sticWait(from)
         te = args.join(" ");
         hx.fbdown(`${te}`).then((G) => {
           ten = `${G.HD}`;
@@ -3326,7 +3326,7 @@ sendMediaURL(from,`${res.result.link}`,`${res.result.desc}`)
         if (!isUrl(args[0]) && !args[0].includes("instagram.com"))
           return reply(mess.Iv);
         if (!q) return fakegroup("The link?");
-        reply(mess.wait);
+        sticWait(from)
         hx.igdl(args[0]).then(async (result) => {
           for (let i of result.medias) {
             if (i.url.includes("mp4")) {
@@ -5153,7 +5153,7 @@ break
         );
         if (!isLinks2) return reply(mess.error.Iv);
         try {
-          reply(mess.wait);
+          sticWait(from)
           ytv(args[0]).then((res) => {
             const { dl_link, thumb, title, filesizeF, filesize } = res;
             axios
