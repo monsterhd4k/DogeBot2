@@ -3320,7 +3320,7 @@ var { igDownloader } = require('./lib/igdown')
 reply(mess.error.api)
 })
 console.log(res)
-sendMediaURL(from,`${res.result.link}`,`${res.result.desc}`)
+sendMediaURL(from,``,``)
                     break
                           case "instagram2":
         if (!isUrl(args[0]) && !args[0].includes("instagram.com"))
