@@ -136,7 +136,7 @@ nopref = false
 // APIKEY
 HunterApi = settings.HunterApi
 zeksApi = settings.ZeksApi
-ApiZeks = 'https://api.zeks.xyz'
+ApiZeks = 'https://api.zeks.me'
 zeksApikey = 'Alphabott'
 YuzApi = 'Yuzzu'
 zerkey = settings.Zerkey
