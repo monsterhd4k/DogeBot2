@@ -115,7 +115,7 @@ menusimpel = false
 autojoin = true
 menuall = false
 baterai = {
-battery: "" || "Not detected",
+battery: "" || "No detectado",
 isCharge: "" || true
 }
 offline = false
@@ -163,10 +163,10 @@ function waktu(seconds) {
 	var h = Math.floor(seconds % (3600 * 24) / 3600);
 	var m = Math.floor(seconds % 3600 / 60);
 	var s = Math.floor(seconds % 60);
-	var dDisplay = d > 0 ? d + (d == 1 ? " day, " : " days, ") : "";
-	var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
-	var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
-	var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
+	var dDisplay = d > 0 ? d + (d == 1 ? " dia, " : " dias, ") : "";
+	var hDisplay = h > 0 ? h + (h == 1 ? " hora, " : " horas, ") : "";
+	var mDisplay = m > 0 ? m + (m == 1 ? " minuto, " : " minutos, ") : "";
+	var sDisplay = s > 0 ? s + (s == 1 ? " segundo" : " segundos") : "";
 	return dDisplay + hDisplay + mDisplay + sDisplay;
 }
 const addafk = (from) => {
@@ -283,10 +283,10 @@ try {
 		const c = args.join(' ')
 		var pes = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''
 		const messagesD = pes.slice(0).trim().split(/ +/).shift().toLowerCase()
-		const dfrply = fs.readFileSync('./thumb.jpg')
+		const dfrply = fs.readFileSync('./logobot.jpg')
 		const tmbh = fs.readFileSync('./tmbh.jpg')
 		const donasii = fs.readFileSync('./media/donasi.jpeg')
-		gambarrr = fs.readFileSync('./thumb.jpg')
+		gambarrr = fs.readFileSync('./logobot.jpg')
 		cmhit.push(command)
         mess = {
 			wait: 'Espere un momento...',
@@ -363,7 +363,7 @@ return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a
 		pporang = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 		      }
 		const ofrply = await getBuffer(pporang)
-		const pporigi = fs.readFileSync('./thumb.jpg')
+		const pporigi = fs.readFileSync('./logobot.jpg')
 		const sekarang = new Date().getTime();
 			//-
 			//WAKTU
@@ -1100,7 +1100,7 @@ reply(String(e))
               directPath:
                 "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
               mediaKeyTimestamp: "1610993486",
-              jpegThumbnail: fs.readFileSync("./thumb.jpg"),
+              jpegThumbnail: fs.readFileSync("./logobot.jpg"),
               scansSidecar:
                 "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw==",
             },
@@ -1526,49 +1526,49 @@ await alpha.sendMessage(from, grup, MessageType.buttonsMessage, {quoted: ftex})
 		break
 case 'groupmenu':
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
-stamtus = `❏ 「 \`\`\`GROUP MENU\`\`\` 」
+stamtus = `❏ 「 \`\`\`MENU DE GRUPO\`\`\` 」
 ────────────────────
-🐶 ${prefix}getpict [ @tag ]
-🐶 ${prefix}getname [ reply target ]
-🐶 ${prefix}getbio [ reply target ]
-🐶 ${prefix}promote [ @tag ]
-🐶 ${prefix}demote [ @tag ]
-🐶 ${prefix}antilink [ on/off ]
-🐶 ${prefix}antivirtex [ on/off ]
-🐶 ${prefix}antiwame [ on/off ]
-🐶 ${prefix}antibug [ on/off ]
-🐶 ${prefix}creategrup [ name|@tag ]
-🐶 ${prefix}tictactoe [ @tag ]
-🐶 ${prefix}nsfw [1/0]
-🐶 ${prefix}delttt
-🐶 ${prefix}getpp
-🐶 ${prefix}getdescgc
-🐶 ${prefix}sider [ reply to bot messages ]
-🐶 ${prefix}hacked [text]
-🐶 ${prefix}setnamegc [text]
-🐶 ${prefix}setdescgc [*text]
-🐶 ${prefix}slander [ @tag|text1|text2 ]
-🐶 ${prefix}contag [number|name]
-🐶 ${prefix}scontact [ @tag|name ]
-🐶 ${prefix}autojoin
-🐶 ${prefix}join [group link]
-🐶 ${prefix}opengc
-🐶 ${prefix}closegc
-🐶 ${prefix}resetgclink
-🐶 ${prefix}grouplink
-🐶 ${prefix}hidetag [text]
-🐶 ${prefix}sticktag [ sticker name ]
-🐶 ${prefix}totag [ reply media ]
-🐶 ${prefix}tagall
-🐶 ${prefix}tagsomeone [number]
+📂 ${prefix}getpict [ @usuario ]
+📂 ${prefix}getname [ responde usuario ]
+📂 ${prefix}getbio [ responde usuario ]
+📂 ${prefix}promote [ @usuario ]
+📂 ${prefix}demote [ @usuario ]
+📂 ${prefix}antilink [ on/off ]
+📂 ${prefix}antivirtex [ on/off ]
+📂 ${prefix}antiwame [ on/off ]
+📂 ${prefix}antibug [ on/off ]
+📂 ${prefix}creategrup [ nombre|@usuario ]
+📂 ${prefix}tictactoe [ @usuario ]
+📂 ${prefix}nsfw [1/0]
+📂 ${prefix}delttt
+📂 ${prefix}getpp
+📂 ${prefix}getdescgc
+📂 ${prefix}sider [ responde a mensaje del bot ]
+📂 ${prefix}hacked [ texto ]
+📂 ${prefix}setnamegc [ texto ]
+📂 ${prefix}setdescgc [ texto ]
+📂 ${prefix}slander [ @usuario|texto1|texto2 ]
+📂 ${prefix}contag [ numero|nombre ]
+📂 ${prefix}scontact [ @usuario|nombre ]
+📂 ${prefix}autojoin
+📂 ${prefix}join [ link grupo ]
+📂 ${prefix}opengc
+📂 ${prefix}closegc
+📂 ${prefix}resetgclink
+📂 ${prefix}grouplink
+📂 ${prefix}hidetag [ texto ]
+📂 ${prefix}sticktag [ nombre sticker ]
+📂 ${prefix}totag [ responde archivo ]
+📂 ${prefix}tagall
+📂 ${prefix}tagsomeone [ numero ]
 ────────────────────`
 buttons = [
-{buttonId:`sc`,buttonText:{displayText: 'BOT SCRIPT'},type:1},
-{buttonId:`owner`, buttonText: {displayText: 'BOT OWNER'}, type: 1}
+{buttonId:`sc`,buttonText:{displayText: 'Script'},type:1},
+{buttonId:`owner`, buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const funyo = {
     contentText: `${stamtus}`,
-    footerText: `_error or bug please report to owner_\n_bot in development_\n_sorry if the features are incomplete_`,
+    footerText: `© Monster-Bot`,
     buttons: buttons,
     headerType: 1
 }
@@ -1678,22 +1678,22 @@ alpha.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentio
 break
 case 'nsfwmenu':
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
-stamtus = `❏ 「 \`\`\`18+ MENU\`\`\` 」
+stamtus = `❏ 「 \`\`\`MENU NSFW\`\`\` 」
 ────────────────────
-🐶 ${prefix}hentai
-🐶 ${prefix}blowjob
-🐶 ${prefix}awoo
-🐶 ${prefix}neko
-🐶 ${prefix}megumin2
-🐶 ${prefix}trapnime
+📂 ${prefix}hentai
+📂 ${prefix}blowjob
+📂 ${prefix}awoo
+📂 ${prefix}neko
+📂 ${prefix}megumin2
+📂 ${prefix}trapnime
 ────────────────────`
 buttons = [
-{buttonId:`sc`,buttonText:{displayText: 'BOT SCRIPT'},type:1},
-{buttonId:`owner`, buttonText: {displayText: 'BOT OWNER'}, type: 1}
+{buttonId:`sc`,buttonText:{displayText: 'Script'},type:1},
+{buttonId:`owner`, buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const funn = {
     contentText: `${stamtus}`,
-    footerText: `_error or bug please report to owner_\n_bot in development_\n_sorry if the features are incomplete_`,
+    footerText: `© Monster-Bot`,
     buttons: buttons,
     headerType: 1
 }
@@ -1701,125 +1701,125 @@ await alpha.sendMessage(from, funn, MessageType.buttonsMessage, {quoted: ftex})
 		break
 		case 'animemenu':
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
-stamtus = `❏ 「 \`\`\`18+ MENU\`\`\` 」
+stamtus = `❏ 「 \`\`\`MENU DE ANIME\`\`\` 」
 ────────────────────
-🐶 ${prefix}waifu
-🐶 ${prefix}loli
-🐶 ${prefix}husbu
-🐶 ${prefix}milf
-🐶 ${prefix}cosplay
-🐶 ${prefix}wallml
+📂 ${prefix}waifu
+📂 ${prefix}loli
+📂 ${prefix}husbu
+📂 ${prefix}milf
+📂 ${prefix}cosplay
+📂 ${prefix}wallml
 ────────────────────`
 buttons = [
-{buttonId:`sc`,buttonText:{displayText: 'BOT SCRIPT'},type:1},
-{buttonId:`owner`, buttonText: {displayText: 'BOT OWNER'}, type: 1}
+{buttonId:`sc`,buttonText:{displayText: 'Script'},type:1},
+{buttonId:`owner`, buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const animerandomx = {
     contentText: `${stamtus}`,
-    footerText: `_error or bug please report to owner_\n_bot in development_\n_sorry if the features are incomplete_`,
+    footerText: `© Monster-Bot`,
     buttons: buttons,
     headerType: 1
 }
 await alpha.sendMessage(from, animerandomx, MessageType.buttonsMessage, {quoted: ftex})
 		break
 case 'soundmenu':
-stamtus =`❏ 「 \`\`\`SOUND MENU\`\`\` 」
+stamtus =`❏ 「 \`\`\`MENU DE SONIDOS\`\`\` 」
 ────────────────────
-🐶 ${prefix}sound1
-🐶 ${prefix}sound2
-🐶 ${prefix}sound3
-🐶 ${prefix}sound4
-🐶 ${prefix}sound5
-🐶 ${prefix}sound6
-🐶 ${prefix}sound7
-🐶 ${prefix}sound8
-🐶 ${prefix}sound9
-🐶 ${prefix}sound10
+📂 ${prefix}sound1
+📂 ${prefix}sound2
+📂 ${prefix}sound3
+📂 ${prefix}sound4
+📂 ${prefix}sound5
+📂 ${prefix}sound6
+📂 ${prefix}sound7
+📂 ${prefix}sound8
+📂 ${prefix}sound9
+📂 ${prefix}sound10
 
-[ Total Sound 1-75 ]
+[ Total de sonidos 1-75 ]
 ────────────────────`
 buttons = [
-{buttonId:`sc`, buttonText: {displayText: 'BOT SCRIPT'}, type: 1},
-{buttonId:`owner`,buttonText:{displayText: 'BOT OWNER'},type:1}
+{buttonId:`sc`, buttonText: {displayText: 'Script'}, type: 1},
+{buttonId:`owner`,buttonText:{displayText: 'Owner'},type:1}
 ]
 const soundM = {
     contentText: `${stamtus}`,
-    footerText: `_error or bug please report to owner_\n_bot in development_\n_sorry if the features are incomplete_`,
+    footerText: `© Monster-Bot`,
     buttons: buttons,
     headerType: 1
 }
 await alpha.sendMessage(from, soundM, MessageType.buttonsMessage, {quoted: ftex})
 break
 case 'ownermenu':
-stamtus =`❏ 「 \`\`\`OWNER MENU\`\`\` 」
+stamtus =`❏ 「 \`\`\`MENU DE OWNER\`\`\` 」
 ────────────────────
-🐶 ${prefix}rentbot
-🐶 ${prefix}autoresponse
-🐶 ${prefix}bc [ text ]
-🐶 ${prefix}tobc [ reply sticker/audio ]
-🐶 ${prefix}return [ javascript ]
-🐶 ${prefix}clearall
-🐶 ${prefix}delchat
-🐶 ${prefix}mute
-🐶 ${prefix}unmute
-🐶 ${prefix}public
-🐶 ${prefix}self
-🐶 ${prefix}spam [ text|amount ]
-🐶 ${prefix}tospam [ reply sticker|total ]
-🐶 ${prefix}demoteall
-🐶 ${prefix}promoteall
-🐶 ${prefix}addcmd [ reply text stc ]
-🐶 ${prefix}delcmd [ reply stc ]
-🐶 ${prefix}listcmd
-🐶 ${prefix}spamsw [ text|amount ]
-🐶 ${prefix}upswtext [text]
-🐶 ${prefix}upswloc [text]
-🐶 ${prefix}upswaudio [ reply audio ]
-🐶 ${prefix}upswvoice [ reply audio ]
-🐶 ${prefix}upswsticker [ reply sticker ]
-🐶 ${prefix}upswimage [ reply image ]
-🐶 ${prefix}upswgif [ reply gif ]
-🐶 ${prefix}upswvideo [ reply video ]
-🐶 ${prefix}shutdown
-🐶 ${prefix}offline [ reason ]
-🐶 ${prefix}online
-🐶 ${prefix}exif [ nama|author ]
-🐶 ${prefix}setprofile [ reply image ]
-🐶 ${prefix}setname [text]
-🐶 ${prefix}setprefix [ multi/nopref/prefix ]
-🐶 ${prefix}setbio [text]
-🐶 ${prefix}leave
-🐶 ${prefix}restart
-🐶 ${prefix}addresponse [ ask|answer ]
-🐶 ${prefix}delresponse [ name ]
-🐶 ${prefix}listresponse
-🐶 ${prefix}addvn [reply audio with caption]
-🐶 ${prefix}delvn [vn name]
-🐶 ${prefix}listvn
-🐶 ${prefix}addsticker [reply sticker with caption]
-🐶 ${prefix}delsticker [sticker name]
-🐶 ${prefix}liststicker
-🐶 ${prefix}addimage [reply image with caption]
-🐶 ${prefix}delimage [image name]
-🐶 ${prefix}imagelist
-🐶 ${prefix}readall
-🐶 ${prefix}unreadall
-🐶 ${prefix}archive
-🐶 ${prefix}unarchiveall
-🐶 ${prefix}pin
-🐶 ${prefix}unpin
-🐶 ${prefix}leavetime [ sec/min/hr ]
-🐶 ${prefix}opentime [ sec/min/hr ]
-🐶 ${prefix}closetime [ sec/min/hr ]
-🐶 ${prefix}nano [ filename ]
+📂 ${prefix}rentbot
+📂 ${prefix}autoresponse
+📂 ${prefix}bc [ texto ]
+📂 ${prefix}tobc [ responde sticker/audio ]
+📂 ${prefix}return [ javascript ]
+📂 ${prefix}clearall
+📂 ${prefix}delchat
+📂 ${prefix}mute
+📂 ${prefix}unmute
+📂 ${prefix}public
+📂 ${prefix}self
+📂 ${prefix}spam [ texto|monto ]
+📂 ${prefix}tospam [ responde sticker|total ]
+📂 ${prefix}demoteall
+📂 ${prefix}promoteall
+📂 ${prefix}addcmd [ responde texto ]
+📂 ${prefix}delcmd [ responde texto ]
+📂 ${prefix}listcmd
+📂 ${prefix}spamsw [ texto|amonto ]
+📂 ${prefix}upswtext [texto]
+📂 ${prefix}upswloc [texto]
+📂 ${prefix}upswaudio [ responde audio ]
+📂 ${prefix}upswvoice [ responde audio ]
+📂 ${prefix}upswsticker [ responde sticker ]
+📂 ${prefix}upswimage [ responde imagen ]
+📂 ${prefix}upswgif [ responde gif ]
+📂 ${prefix}upswvideo [ responde video ]
+📂 ${prefix}shutdown
+📂 ${prefix}offline [ razon ]
+📂 ${prefix}online
+📂 ${prefix}exif [ nombre|autor ]
+📂 ${prefix}setprofile [ responde image ]
+📂 ${prefix}setname [texto]
+📂 ${prefix}setprefix [ multi/nopref/prefix ]
+📂 ${prefix}setbio [texto]
+📂 ${prefix}leave
+📂 ${prefix}restart
+📂 ${prefix}addresponse [ pregunta|respuesta ]
+📂 ${prefix}delresponse [ nombre ]
+📂 ${prefix}listresponse
+📂 ${prefix}addvn [responde audio con texto]
+📂 ${prefix}delvn [texto]
+📂 ${prefix}listvn
+📂 ${prefix}addsticker [responde sticker con texto]
+📂 ${prefix}delsticker [nombre]
+📂 ${prefix}liststicker
+📂 ${prefix}addimage [responde imagen con texto]
+📂 ${prefix}delimage [nombre]
+📂 ${prefix}imagelist
+📂 ${prefix}readall
+📂 ${prefix}unreadall
+📂 ${prefix}archive
+📂 ${prefix}unarchiveall
+📂 ${prefix}pin
+📂 ${prefix}unpin
+📂 ${prefix}leavetime [ sec/min/hr ]
+📂 ${prefix}opentime [ sec/min/hr ]
+📂 ${prefix}closetime [ sec/min/hr ]
+📂 ${prefix}nano [ archivo ]
 ────────────────────`
 buttons = [
-{buttonId:`sc`,buttonText:{displayText: 'BOT SCRIPT'},type:1},
-{buttonId:`owner`, buttonText: {displayText: 'BOT OWNER'}, type: 1}
+{buttonId:`sc`,buttonText:{displayText: 'Script'},type:1},
+{buttonId:`owner`, buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const ownerM = {
     contentText: `${stamtus}`,
-    footerText: `_error or bug please report to owner_\n_bot in development_\n_sorry if the features are incomplete_`,
+    footerText: `© Monster-Bot`,
     buttons: buttons,
     headerType: 1
 }
@@ -1827,135 +1827,133 @@ await alpha.sendMessage(from, ownerM, MessageType.buttonsMessage, {quoted: ftex}
 break
 case 'downloadmenu':
 case 'donwloadmenu':
-stamtus =`❏ 「 \`\`\`DOWNLOAD MENU\`\`\` 」
+stamtus =`❏ 「 \`\`\`MENU DE DESCARGAS\`\`\` 」
 ────────────────────
-🐶 ${prefix}herolist
-🐶 ${prefix}herodetail [ hero ]
-🐶 ${prefix}google [ search ]
-🐶 ${prefix}gimage [ search ]
-🐶 ${prefix}wiki [ search ] _indo_
-🐶 ${prefix}mediafire [ link ]
-🐶 ${prefix}facebook [ fb link ]
-🐶 ${prefix}facebook2 [ fb link ]
-🐶 ${prefix}twitter [ twitter video link ]
-🐶 ${prefix}twmp3 [ twitter video link ]
-🐶 ${prefix}twitter2 [ twitter video link ]
-🐶 ${prefix}ytmp4 [ yt link ]
-🐶 ${prefix}ytmp3 [ yt link ]
-🐶 ${prefix}play [ song title ]
-🐶 ${prefix}tiktok [ link ]
-🐶 ${prefix}video [ video title ]
-🐶 ${prefix}tinyurl [ link ]
-🐶 ${prefix}fetch [ link ]
-🐶 ${prefix}instagram [insta normal video link ] 
-🐶 ${prefix}pinterest [ search ]
-🐶 ${prefix}lyrics [ title ]
-🐶 ${prefix}tourl [ reply image/video ]
-🐶 ${prefix}numbers [ number ]
-🐶 ${prefix}calculator [ number ]
-🐶 ${prefix}fancytext [text]
-🐶 ${prefix}githubstalk [ username ]
-🐶 ${prefix}translate [ code text ]
-🐶 ${prefix}ss [ link ]
+📂 ${prefix}herolist
+📂 ${prefix}herodetail [ nombre ]
+📂 ${prefix}google [ nombre ]
+📂 ${prefix}gimage [ nombre ]
+📂 ${prefix}wiki [ texto ] _Indonesio_
+📂 ${prefix}mediafire [ link ]
+📂 ${prefix}facebook [ fb link ]
+📂 ${prefix}facebook2 [ fb link ]
+📂 ${prefix}twitter [ twitter video link ]
+📂 ${prefix}twmp3 [ twitter video link ]
+📂 ${prefix}twitter2 [ twitter video link ]
+📂 ${prefix}ytmp4 [ yt link ]
+📂 ${prefix}ytmp3 [ yt link ]
+📂 ${prefix}play [ nombre ]
+📂 ${prefix}tiktok [ link ]
+📂 ${prefix}video [ nombre ]
+📂 ${prefix}tinyurl [ link ]
+📂 ${prefix}fetch [ link ]
+📂 ${prefix}instagram [ link ] 
+📂 ${prefix}pinterest [ nombre ]
+📂 ${prefix}lyrics [ nombre ]
+📂 ${prefix}tourl [ responde imagen/video ]
+📂 ${prefix}numbers [ numero ]
+📂 ${prefix}calculator [ numero ]
+📂 ${prefix}fancytext [ texto ]
+📂 ${prefix}githubstalk [ nombre ]
+📂 ${prefix}translate [ codigo ]
+📂 ${prefix}ss [ link ]
 ────────────────────`
 buttons = [
-{buttonId:`sc`,buttonText:{displayText: 'BOT SCRIPT'},type:1},
-{buttonId:`owner`, buttonText: {displayText: 'BOT OWNER'}, type: 1}
+{buttonId:`sc`,buttonText:{displayText: 'Script'},type:1},
+{buttonId:`owner`, buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const downloadM = {
     contentText: `${stamtus}`,
-    footerText: `_error or bug please report to owner_\n_bot in development_\n_sorry if the features are incomplete_`,
+    footerText: `© Monster-Bot`,
     buttons: buttons,
     headerType: 1
 }
 await alpha.sendMessage(from, downloadM, MessageType.buttonsMessage, {quoted: ftex})
 break
 case 'makermenu':
-stamtus =`❏ 「 \`\`\`MAKER MENU\`\`\` 」
+stamtus =`❏ 「 \`\`\`MENU DE CREACIONES\`\`\` 」
 ────────────────────
-_example: ${prefix}throne Xeon_
-────────────────────
-🐶 ${prefix}write 「 text 」
-🐶 ${prefix}throne 「 text 」
-🐶 ${prefix}logoff 「 text 」
-🐶 ${prefix}cslogo 「 text 」
-🐶 ${prefix}matrix 「 text 」
-🐶 ${prefix}skytext 「 text 」
-🐶 ${prefix}barcode 「 text 」
-🐶 ${prefix}narutotxt 「 text 」
-🐶 ${prefix}bneon 「 text 」
-🐶 ${prefix}tfire 「 text 」
-🐶 ${prefix}light 「 text 」
-🐶 ${prefix}wall 「 text 」
-🐶 ${prefix}dropair 「 text 」
-🐶 ${prefix}wolf 「 text 」
-🐶 ${prefix}logocrs 「 text 」
-🐶 ${prefix}phlogo 「 text 」
-🐶 ${prefix}phcomment 「 *text|text 」
-🐶 ${prefix}pubg 「 text|text 」
-🐶 ${prefix}leavest 「 text 」
-🐶 ${prefix}notewrite 「 text 」
-🐶 ${prefix}neon2 「 text 」
-🐶 ${prefix}marvel 「 text|text 」
-🐶 ${prefix}logoa 「 text|text 」
-🐶 ${prefix}t3d 「 text 」
-🐶 ${prefix}flower 「 text 」
-🐶 ${prefix}gplay 「 text 」
-🐶 ${prefix}splay 「 text 」
+📂 ${prefix}write 「 texto 」
+📂 ${prefix}throne 「 texto 」
+📂 ${prefix}logoff 「 texto 」
+📂 ${prefix}cslogo 「 texto 」
+📂 ${prefix}matrix 「 texto 」
+📂 ${prefix}skytext 「 texto 」
+📂 ${prefix}barcode 「 texto 」
+📂 ${prefix}narutotxt 「 texto 」
+📂 ${prefix}bneon 「 texto 」
+📂 ${prefix}tfire 「 texto 」
+📂 ${prefix}light 「 texto 」
+📂 ${prefix}wall 「 texto 」
+📂 ${prefix}dropair 「 texto 」
+📂 ${prefix}wolf 「 texto 」
+📂 ${prefix}logocrs 「 texto 」
+📂 ${prefix}phlogo 「 texto 」
+📂 ${prefix}phcomment 「 texto1|texto2 」
+📂 ${prefix}pubg 「 texto1|texto2 」
+📂 ${prefix}leavest 「 texto 」
+📂 ${prefix}notewrite 「 texto 」
+📂 ${prefix}neon2 「 texto 」
+📂 ${prefix}marvel 「 texto1|texto2 」
+📂 ${prefix}logoa 「 texto1|texto2 」
+📂 ${prefix}t3d 「 texto 」
+📂 ${prefix}flower 「 texto 」
+📂 ${prefix}gplay 「 texto 」
+📂 ${prefix}splay 「 texto 」
 ────────────────────`
 buttons = [
-{buttonId:`sc`,buttonText:{displayText: 'BOT SCRIPT'},type:1},
-{buttonId:`owner`, buttonText: {displayText: 'BOT OWNER'}, type: 1}
+{buttonId:`sc`,buttonText:{displayText: 'Script'},type:1},
+{buttonId:`owner`, buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const makerM = {
     contentText: `${stamtus}`,
-    footerText: `_error or bug please report to owner_\n_bot in development_\n_sorry if the features are incomplete_`,
+    footerText: `© Monster-Bot`,
     buttons: buttons,
     headerType: 1
 }
 await alpha.sendMessage(from, makerM, MessageType.buttonsMessage, {quoted: ftex})
 break
 case 'othermenu':
-stamtus =`❏ 「 \`\`\`OTHER MENU\`\`\` 」
+stamtus =`❏ 「 \`\`\`MENU VARIADO\`\`\` 」
 ────────────────────
-🐶 ${prefix}searchmessage [ text|amount ]
-🐶 ${prefix}slots
-🐶 ${prefix}suit [ scissors/rock/paper ]
-🐶 ${prefix}tag [ number ]
-🐶 ${prefix}tagme
-🐶 ${prefix}tts [ code text ]
-🐶 ${prefix}readmore [ text1|text2 ]
-🐶 ${prefix}slanderpc [ number|text1|text2 ]
-🐶 ${prefix}chat [ number|text ]
-🐶 ${prefix}listgrup
-🐶 ${prefix}baileys [ reply message ]
-🐶 ${prefix}q [ reply message ]
-🐶 ${prefix}getcaption [ reply message ]
-🐶 ${prefix}shareloc [ text1|text2 ]
-🐶 ${prefix}sticker
-🐶 ${prefix}stcmeme [reply to sticker with text|text]
-🐶 ${prefix}stickerwm [ name|author ]
-🐶 ${prefix}takestick [ name|author ]
-🐶 ${prefix}dice
-🐶 ${prefix}semoji [ emoji ]
-🐶 ${prefix}attp [text]
-🐶 ${prefix}toimg
-🐶 ${prefix}tomp3 [ reply video ]
-🐶 ${prefix}tomp4 [ reply sticker gif ]
-🐶 ${prefix}robot [ reply audio ]
-🐶 ${prefix}reverse [ reply audio ]
-🐶 ${prefix}bass [ reply audio ]
-🐶 ${prefix}fat [ reply audio ]
-🐶 ${prefix}vnsec [ reply audio caption number ]
-🐶 ${prefix}vidsec [ reply video caption numbers ]
+📂 ${prefix}searchmessage [ texto|monto ]
+📂 ${prefix}slots
+📂 ${prefix}suit [ scissors/rock/paper ]
+📂 ${prefix}tag [ numero ]
+📂 ${prefix}tagme
+📂 ${prefix}tts [ codigo de texto ]
+📂 ${prefix}readmore [ texto1|texto2 ]
+📂 ${prefix}slanderpc [ numero|texto1|texto2 ]
+📂 ${prefix}chat [ numero|texto ]
+📂 ${prefix}listgrup
+📂 ${prefix}baileys [ responde mensaje ]
+📂 ${prefix}q [ responde mensaje ]
+📂 ${prefix}getcaption [ responde mensaje ]
+📂 ${prefix}shareloc [ texto1|texto2 ]
+📂 ${prefix}sticker
+📂 ${prefix}stcmeme [responde a sticker: texto1|texto2]
+📂 ${prefix}stickerwm [ nombre|autor ]
+📂 ${prefix}takestick [ nombre|autor ]
+📂 ${prefix}dice
+📂 ${prefix}semoji [ emoji ]
+📂 ${prefix}attp [ texto ]
+📂 ${prefix}toimg
+📂 ${prefix}tomp3 [ responde video ]
+📂 ${prefix}tomp4 [ responde sticker gif ]
+📂 ${prefix}robot [ responde audio ]
+📂 ${prefix}reverse [ responde audio ]
+📂 ${prefix}bass [ responde audio ]
+📂 ${prefix}fat [ responde audio ]
+📂 ${prefix}vnsec [ responde audio con numeros ]
+📂 ${prefix}vidsec [ responde video con numeros ]
 ────────────────────`
 buttons = [
-{buttonId:`sc`,buttonText:{displayText: 'BOT SCRIPT'},type:1},
-{buttonId:`owner`, buttonText: {displayText: 'BOT OWNER'}, type: 1}
+{buttonId:`sc`,buttonText:{displayText: 'Script'},type:1},
+{buttonId:`owner`, buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const otherM = {
     contentText: `${stamtus}`,
-    footerText: `_error or bug please report to owner_\n_bot in development_\n_sorry if the features are incomplete_`,
+    footerText: `© Monster-Bot`,
     buttons: buttons,
     headerType: 1
 }
@@ -2970,7 +2968,7 @@ sticWait(from)
 hx.twitter(lin).then(res => {
 console.log('[ TWITTER ] downloader')
 Anu = res.SD
-fto = fs.readFileSync('./thumb.jpg')
+fto = fs.readFileSync('./logobot.jpg')
 sendMediaURL(from, Anu, 'Done!')
 })
 break
@@ -3204,17 +3202,17 @@ case 'sc':
 case 'script':
 case 'scbot':
 anu = `──────────────────
-NOTE : _DO NOT SELL BOT SCRIPT_
+_NOTA: EL SCRIPT NO SE VENDE_
 ──────────────────
-*👇SCRIPT GITHUB LINK👇*
+*Link del script:*
 https://github.com/DGXeon/DogeBot2
-_BASE : Xeon Bot Inc._
-_ORI SCRIPT : Doge Bot Version 2_
-_OWNER : ${NamaOwner}_
+*_Base:_* Xeon Bot Inc.
+*_Version:_* Doge Bot Version 2
+*_Editado al español por:_* ${NamaOwner}
 ⍟ ────────────────── ⍟`
 buttons = [
-{buttonId:`donate`, buttonText: {displayText: 'DONATE BOT OWNER'}, type: 1},
-{buttonId:`owner`, buttonText: {displayText: 'BOT OWNER'}, type: 1}
+{buttonId:`donate`, buttonText: {displayText: 'Donar al creador'}, type: 1},
+{buttonId:`owner`, buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const scbott = {
     contentText: `${anu}`,
@@ -3226,15 +3224,15 @@ await alpha.sendMessage(from, scbott, MessageType.buttonsMessage, {quoted: ftex}
 case 'donasi':
 case 'donate':
 donasi =`╭─────────────────
-│     ❒ *DONATE BOT OWNER* ❒
+│     ❒ *Donacion para el creador* ❒
 │╭────────────────
-│⬡» *GOOGLE PAY : ${pulsa}*   
-│⬡» *PAYTM : ${dana}*    
-│└─Contact owner, if u wish to donate──
+│⬡» *GOOGLE PAY:* ${pulsa}  
+│⬡» *PAYTM:* ${dana}   
+│└─Contacta al creador por si quieres donar.──
 └──────────────────────────`
 buttons = [
-{buttonId:`sc`, buttonText: {displayText: 'BOT SCRIPT'}, type: 1},
-{buttonId:`owner`, buttonText: {displayText: 'BOT OWNER'}, type: 1}
+{buttonId:`sc`, buttonText: {displayText: 'Script'}, type: 1},
+{buttonId:`owner`, buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const donatt = {
     contentText: `${donasi}`,
@@ -3335,13 +3333,13 @@ sendMediaURL(from,`${res.result.link}`,`${res.result.desc}`)
               let link = await getBuffer(i.url);
               alpha.sendMessage(from, link, video, {
                 quoted: mek,
-                caption: `Type : ${i.type}`,
+                caption: ``,
               });
             } else {
               let link = await getBuffer(i.url);
               alpha.sendMessage(from, link, image, {
                 quoted: mek,
-                caption: `Type : ${i.type}`,
+                caption: ``,
               });
             }
           }
@@ -4783,33 +4781,25 @@ case 'stats':
 					var total = math(`${groups.length} ${privat.length}`)
 					const { wa_version, mcc, mnc, os_version, device_manufacturer, device_model } = alpha.user.phone
 					stamtus = `⍟ ────────────────── ⍟
-Private Chat : ${privat.length}
-Group Chat : ${groups.length}
-Total Chat : ${totalChat.length}
-Speed : ${latensi.toFixed(4)} second
-Runtime : ${kyun(uptime)}
-Battery : ${baterai.battery}
-Charged : ${baterai.isCharge}
-Mode : ${publik ? 'public' : 'self'}
-Prefix : ${multi ? 'Multi Prefix' : 'No Prefix'}
-Ram Usage : ${ram2}
-Hostname : ${os.hostname()}
-Platform : ${os.platform()}
-Uptime : ${kyun(os.uptime())}
-MNC : ${mnc}
-MCC : ${mcc}
-Device Model: ${alpha.user.phone.device_model}
-Device Manufacturing : ${device_manufacturer}
-Wa Version: ${alpha.user.phone.wa_version}
-Os Version: ${alpha.user.phone.os_version}
+🔍*Chat personal:* ${privat.length}
+🔍*Chat de grupo:* ${groups.length}
+🔍*Total de chats:* ${totalChat.length}
+🔍*Ping:* ${latensi.toFixed(4)} segundo
+🔍*Tiempo activo:* ${kyun(uptime)}
+🔍*Bateria:* ${baterai.battery}
+🔍*Cargando:* ${baterai.isCharge}
+🔍*Modo:* ${publik ? 'publico' : 'privado'}
+🔍*Prefijo:* ${multi ? 'Multi Prefijo' : 'No Prefix'}
+🔍*Modelo del dispositivo:* ${device_manufacturer}
+🔍*Version de Whatsapp:* ${alpha.user.phone.wa_version}
 ⍟ ────────────────── ⍟`
 buttons = [
-{buttonId:`scbot`, buttonText: {displayText: 'BOT SCRIPT'}, type: 1},
-{buttonId:`owner`, buttonText:{displayText: 'BOT OWNER'},type:1},
+{buttonId:`scbot`, buttonText: {displayText: 'Script'}, type: 1},
+{buttonId:`owner`, buttonText:{displayText: 'Owner'},type:1},
 ]
 const stats = {
     contentText: `${stamtus}`,
-    footerText: `dont give up because your work is not appreciated and called a newbie...\none day you will definitely be called a role model😌🙌`,
+    footerText: `© Monster-Bot`,
     buttons: buttons,
     headerType: 1
 }
@@ -5696,7 +5686,7 @@ ytmp4 => Video`, contextInfo: { forwardingScore: 508, isForwarded: true, externa
 			case 'runtime':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
 				runtime = process.uptime()
-				reply(`Runtime : ${waktu(runtime)}`)
+				reply(`*⌚Tiempo activo:* ${waktu(runtime)}`)
 				break
 			case 'setbio':
 				if (!isOwner && !mek.key.fromMe) return sticOwner(from)
