@@ -1576,7 +1576,8 @@ const serialUser = createSerial(18)
 ⬡ *Numero:* ${sender.split('@')[0]}
 ┗━━━━━━━━━━━━━━━━━━`
 buttons = [
-{buttonId:`menu`, buttonText: {displayText: 'Menu'}, type: 1}
+{buttonId:`menu`,buttonText:{displayText: 'Menu'},type:1},
+{buttonId:`owner`, buttonText: {displayText: ''}, type: 1}
 ]
 const verify = {
     contentText: `${jancok}`,
