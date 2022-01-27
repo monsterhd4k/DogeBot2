@@ -107,7 +107,7 @@ const dare = JSON.parse(fs.readFileSync('./database/dare.json'))
 ky_ttt = []
 tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
 cmhit = []
-fake = "Doge Bot";
+fake = "© Monster-Bot";
 autorespon = settings.AutoRespon
 playmusic = settings.AutoMusic
 antidelete = settings.AntiDelete
@@ -575,7 +575,7 @@ const ftex = {
                 },
 	 message: { 
 		"extendedTextMessage": {
-                 "text": `*${botName} by Xeon Bot Inc.*`,
+                 "text": `*${botName} by monsterhd4k.*`,
                  "title": `_${botName}_`,
                  'jpegThumbnail': gambarrr
                         }
@@ -640,7 +640,7 @@ options
 );
 };
 
-const daftar1 = `Hola *${pushname}* 👋🏻\nVerifiquese para utilizar el bot`
+const daftar1 = `Hola *${pushname}* 👋🏻\nVerifiquese para utilizar el bot.`
 const daftar2 = '_Presione el boton de abajo para verificarte_'
 const daftar3 = [{buttonId: `verify`,buttonText: {displayText: `Verificarse`,},type: 1,},]
 
@@ -793,7 +793,7 @@ if (!mek.key.remoteJid.endsWith('@g.us') && offline){
 	        alpha.sendMessage(from, { displayname: nama, vcard: vcard}, MessageType.contact, {contextInfo: {"mentionedJid": ane}})
             }
 		const reply = (teks) => {
-			alpha.sendMessage(from, teks, text, { thumbnail: ofrply, sendEphemeral: true, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: `Doge Bot`,body:"HORNY = BONK",previewType:"PHOTO",thumbnail:ofrply,sourceUrl:`https://wa.me/p/6349482305092740/916909137213`}}})
+			alpha.sendMessage(from, teks, text, { thumbnail: ofrply, sendEphemeral: true, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: `© Monster-Bot`,body:"by monsterhd4k",previewType:"PHOTO",thumbnail:ofrply,sourceUrl:`https://wa.me/+16096664645`}}})
 		}
 		const simir = (teks) => {
 			alpha.sendMessage(from, teks, text, { quoted:ftex })
@@ -1228,6 +1228,17 @@ ${z}📂 ${prefix}downloadmenu${z} | Menu de Descargas
 ${z}📂 ${prefix}nsfwmenu${z} | Menu +18
 ${z}📂 ${prefix}animemenu${z} | Menu de anime
 ┗━━━━━━━━━━━━━━━━━`
+buttons = [
+{buttonId:`scbot`, buttonText: {displayText: ''}, type: 1},
+{buttonId:`owner`, buttonText: {displayText: ''}, type: 1}
+]
+const menuu = {
+    contentText: `${tod}`,
+    footerText: `${tod2}`,
+    buttons: buttons,
+    headerType: 1
+}
+await alpha.sendMessage(from, menuu, MessageType.buttonsMessage, {quoted: ftex})
 		break
 case 'test':
 reply(`BOT WAS ONLINE BEFORE YOUR BIRTH😏`)
@@ -1573,7 +1584,7 @@ const serialUser = createSerial(18)
 	         const jancok = `┏━━━❒ *Verificado* ❒━━━━	         
 ⬡ *Nombre:* ${pushname}
 ⬡ *Serial:* ${serialUser}	
-⬡ *Numero:* ${sender.split('@')[0]}
+⬡ *Numero:* +${sender.split('@')[0]}
 ┗━━━━━━━━━━━━━━━━━━`
 buttons = [
 {buttonId:`menu`,buttonText:{displayText: 'Menu'},type:1},
