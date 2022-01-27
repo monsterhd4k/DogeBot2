@@ -1212,21 +1212,21 @@ quotesnya = await fetchJson(`https://api.lolhuman.xyz/api/random/quotes?apikey=K
 quotes = quotesnya.result.quote
 by = quotesnya.result.by
 tod = `┏━━━━━━━━━━━━━━━━━━━━
-⬡ *_Nombre del bot:_* ${botName}${z}
-⬡ *_Nombre del Owner:_* ${NamaOwner}${z}
-⬡ *_Numero del Owner:_* +${NomorOwner}${z}
+⬡ *Nombre del bot:* ${botName}
+⬡ *Nombre del Owner:* ${NamaOwner}
+⬡ *Numero del Owner:* +${NomorOwner}
 ┗━━━━━━━━━━━━━━━━━━`
 tod2 =`┏━━━❒ *Lista de Menus*
-📂 *_${prefix}soundmenu_*  |  Menu de Sonidos
-📂 *_${prefix}status_*  |  Estado del Bot
-📂 *_${prefix}runtime_*  |  Tiempo activo del Bot
-📂 *_${prefix}makermenu_* |  Menu de Creaciones 
-📂 *_${prefix}ownermenu_*  |  Menu del Owner
-📂 *_${prefix}groupmenu_*  |  Menu del Grupo
-📂 *_${prefix}othermenu_*  |  Menu Variado
-📂 *_${prefix}downloadmenu_*  |  Menu de Descargas
-📂 *_${prefix}nsfwmenu_*  |  Menu +18
-📂 *_${prefix}animemenu_*  |  Menu de anime
+📂 *_${prefix}soundmenu_*ㅤㅤ|ㅤㅤMenu de Sonidos
+📂 *_${prefix}status_*ㅤ  |  ㅤEstado del Bot
+📂 *_${prefix}runtime_*ㅤㅤ|ㅤㅤTiempo activo del Bot
+📂 *_${prefix}makermenu_*ㅤㅤ|ㅤㅤMenu de Creaciones 
+📂 *_${prefix}ownermenu_*ㅤㅤ|ㅤㅤMenu del Owner
+📂 *_${prefix}groupmenu_*ㅤㅤ|ㅤㅤMenu del Grupo
+📂 *_${prefix}othermenu_*ㅤㅤ|ㅤㅤMenu Variado
+📂 *_${prefix}downloadmenu_*ㅤㅤ|ㅤㅤMenu de Descargas
+📂 *_${prefix}nsfwmenu_*ㅤㅤ|ㅤㅤMenu +18
+📂 *_${prefix}animemenu_*ㅤㅤ|ㅤㅤMenu de anime
 ┗━━━━━━━━━━━━━━━━━`
 buttons = [
 {buttonId:`scbot`, buttonText: {displayText: 'Script'}, type: 1},
