@@ -289,7 +289,7 @@ try {
 		gambarrr = fs.readFileSync('./thumb.jpg')
 		cmhit.push(command)
         mess = {
-			wait: 'Wait a minute',
+			wait: 'Espere un momento...',
 			success: 'Success',
 			error: {
 				stick: 'Cannot access videos!',
@@ -793,7 +793,7 @@ if (!mek.key.remoteJid.endsWith('@g.us') && offline){
 	        alpha.sendMessage(from, { displayname: nama, vcard: vcard}, MessageType.contact, {contextInfo: {"mentionedJid": ane}})
             }
 		const reply = (teks) => {
-			alpha.sendMessage(from, teks, text, { thumbnail: ofrply, sendEphemeral: true, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: `© Monster-Bot`,body:"by monsterhd4k",previewType:"PHOTO",thumbnail:ofrply,sourceUrl:`https://wa.me/+16096664645`}}})
+			alpha.sendMessage(from, teks, text, { thumbnail: ofrply, sendEphemeral: true, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: `© Monster-Bot`,body:"by monsterhd4k",previewType:"PHOTO","./thumb.jpg",thumbnail:ofrply,sourceUrl:`https://wa.me/+16096664645`}}})
 		}
 		const simir = (teks) => {
 			alpha.sendMessage(from, teks, text, { quoted:ftex })
