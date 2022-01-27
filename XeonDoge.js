@@ -136,7 +136,7 @@ nopref = false
 // APIKEY
 HunterApi = settings.HunterApi
 zeksApi = settings.ZeksApi
-ApiZeks = 'https://api.zeks.me'
+ApiZeks = 'https://api.zeks.xyz'
 zeksApikey = 'Alphabott'
 YuzApi = 'Yuzzu'
 zerkey = settings.Zerkey
@@ -640,9 +640,9 @@ options
 );
 };
 
-const daftar1 = `*Hi ${pushname}* 👋\n*Please Verify First*`
-const daftar2 = '_Click the button below to verify_'
-const daftar3 = [{buttonId: `verify`,buttonText: {displayText: `🐶VERIFY🐶`,},type: 1,},]
+const daftar1 = `Hola *${pushname}* 👋🏻\nVerifiquese para utilizar el bot`
+const daftar2 = '_Presione el boton de abajo para verificarte_'
+const daftar3 = [{buttonId: `verify`,buttonText: {displayText: `Verificarse`,},type: 1,},]
 
 const createSerial = (size) => {
 return crypto.randomBytes(size).toString('hex').slice(0, size)
@@ -1212,37 +1212,22 @@ quotesnya = await fetchJson(`https://api.lolhuman.xyz/api/random/quotes?apikey=K
 quotes = quotesnya.result.quote
 by = quotesnya.result.by
 tod = `┏━━━━━━━━━━━━━━━━━━━━
-⬡ ${z}Bot name : ${botName}${z}
-⬡ ${z}Owner Name : ${NamaOwner}${z}
-⬡ ${z}Owner Number : ${NomorOwner}${z}
+⬡ *${z}Nombre del bot:* ${botName}${z}
+⬡ *${z}Nombre del Owner:* ${NamaOwner}${z}
+⬡ *${z}Numero del Owner:* +${NomorOwner}${z}
 ┗━━━━━━━━━━━━━━━━━━`
-tod2 =`┏━━━❒ *MENU LIST*
-${z}🐶 ${prefix}soundmenu${z}
-${z}🐶 ${prefix}rentbot${z}
-${z}🐶 ${prefix}status${z}
-${z}🐶 ${prefix}intakemenu${z}
-${z}🐶 ${prefix}runtime${z}
-${z}🐶 ${prefix}makermenu${z}
-${z}🐶 ${prefix}ownermenu${z}
-${z}🐶 ${prefix}groupmenu${z}
-${z}🐶 ${prefix}othermenu${z}
-${z}🐶 ${prefix}downloadmenu${z}
-${z}🐶 ${prefix}funmenu${z}
-${z}🐶 ${prefix}nsfwmenu${z}
-${z}🐶 ${prefix}animemenu${z}
-    watch how you can install this bot in your whatsapp: https://youtu.be/zXvwqA8LvTw
+tod2 =`┏━━━❒ *LISTA DE MENUS*
+${z}📂 ${prefix}soundmenu${z} | Menu de Sonidos
+${z}📂 ${prefix}status${z} | Estado del Bot
+${z}📂 ${prefix}runtime${z} | Tiempo activo del Bot
+${z}📂 ${prefix}makermenu${z} | Menu de Creaciones 
+${z}📂 ${prefix}ownermenu${z} | Menu del Owner
+${z}📂 ${prefix}groupmenu${z} | Menu del Grupo
+${z}📂 ${prefix}othermenu${z} | Menu Variado
+${z}📂 ${prefix}downloadmenu${z} | Menu de Descargas
+${z}📂 ${prefix}nsfwmenu${z} | Menu +18
+${z}📂 ${prefix}animemenu${z} | Menu de anime
 ┗━━━━━━━━━━━━━━━━━`
-buttons = [
-{buttonId:`scbot`, buttonText: {displayText: 'BOT SCRIPT🔖'}, type: 1},
-{buttonId:`owner`, buttonText: {displayText: 'BOT OWNER👤'}, type: 1}
-]
-const menuu = {
-    contentText: `${tod}`,
-    footerText: `${tod2}`,
-    buttons: buttons,
-    headerType: 1
-}
-await alpha.sendMessage(from, menuu, MessageType.buttonsMessage, {quoted: ftex})
 		break
 case 'test':
 reply(`BOT WAS ONLINE BEFORE YOUR BIRTH😏`)
@@ -1301,7 +1286,7 @@ case 'stupid':
         const go = groupMembers
         const goo = pff[Math.floor(Math.random() * pff.length)]
         const oe = go[Math.floor(Math.random() * go.length)]
-        teks = `*The most ${command} here is:* @${goo.jid.split('@')[0]}`
+        teks = `*El mas ${command} del grupo es:* @${goo.jid.split('@')[0]}`
         membr.push(goo.jid)
         mentions(teks, membr, true)
         break
@@ -1579,20 +1564,19 @@ const funyo = {
 await alpha.sendMessage(from, funyo, MessageType.buttonsMessage, {quoted: ftex})
 		break
 case 'verify':
-if (isRegistered) return reply('You are already registered in the bot database')
+if (isRegistered) return reply('Ya estas registrado carajo')
 const serialUser = createSerial(18)
 	        veri = sender
 	        _registered.push(sender)
 	        fs.writeFileSync('./database/registered.json', JSON.stringify(_registered))
 	        addRegisteredUser(sender, serialUser)
-	         const jancok = `┏━━━❒ *Verified* ❒━━━━
-⬡ *Series : ${serialUser}*	         
-⬡ *Name : ${pushname}*
-⬡ *Whatsapp : ${sender.split('@')[0]}*
+	         const jancok = `┏━━━❒ *Verificado* ❒━━━━	         
+⬡ *Nombre:* ${pushname}
+⬡ *Serial:* ${serialUser}	
+⬡ *Numero:* ${sender.split('@')[0]}
 ┗━━━━━━━━━━━━━━━━━━`
 buttons = [
-{buttonId:`menu`,buttonText:{displayText: 'MENU'},type:1},
-{buttonId:`owner`, buttonText: {displayText: 'BOT OWNER'}, type: 1}
+{buttonId:`menu`,buttonText:{displayText: 'Menu'},type:1},
 ]
 const verify = {
     contentText: `${jancok}`,
