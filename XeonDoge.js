@@ -3408,7 +3408,7 @@ if (!c) return reply('what are you looking for?')
 pinterest(`${c}`).then( data => {
 const amsulah = data.result
 const pimterest = amsulah[Math.floor(Math.random() * amsulah.length)]
-sendMediaURL (from ,pimterest , `Pinterest : ${c}`)
+sendMediaURL (from ,pimterest , `*Pinterest:* ${c}`)
 })
 break
       case 'pinterest':
@@ -3561,8 +3561,8 @@ if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted
 case 'ttt':
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
 if (!isGroup) return reply(mess.only.group)
-if (args.length < 1) return reply('Tag Your Opponent! ')
-if (isTTT) return reply('There is a game in this group, please wait')
+if (args.length < 1) return reply('Etiqueta a tu oponente! ')
+if (isTTT) return reply('Hay un juego en curso, por favor espera.')
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag the opponents target!')
 ment = mek.message.extendedTextMessage.contextInfo.mentionedJid
 player1 = sender
@@ -3571,12 +3571,14 @@ angka = ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","
 id = from
 gilir = player2
 ky_ttt.push({player1,player2,id,angka,gilir})
-alpha.sendMessage(from, `*🎳 Starting a Tictactoe Game 🎲*
+alpha.sendMessage(from, `*🎳 Empezando juego de TicTacToe 🎲*
 
-[@${player2.split('@')[0]}] Challenge you to be the opponent of the Game🔥
-Type Y/N to accept or reject the game
+@${player2.split('@')[0]} Te desafian a ser el oponente del juego🔥
+Escriba Y/N para aceptar o rechazar el juego.
+Y= Aceptar
+N= Rechazar
 
-Type ${prefix}delttc , To reset the game in the group!`, text, {contextInfo: {mentionedJid: [player2]}})
+Escriba ${prefix}delttc ,para reiniciar el juego en el grupo.`, text, {contextInfo: {mentionedJid: [player2]}})
 break
                 case 'delttt':
                 case 'delttc':
@@ -3602,10 +3604,10 @@ break
 		}
 			  break
 case 'mode':
-buttonss = [{buttonId: `public`, buttonText: {displayText: 'PUBLIC👥'}, type: 1},{buttonId: `self`, buttonText: {displayText: 'SELF👤'}, type: 1}]
+buttonss = [{buttonId: `public`, buttonText: {displayText: 'PUBLICO👥'}, type: 1},{buttonId: `self`, buttonText: {displayText: 'PRIVADO👤'}, type: 1}]
 const buMess = {
-    contentText: "SELF/PUBLIC",
-    footerText: 'Please choose one',
+    contentText: "PRIVADO/PUBLICO",
+    footerText: 'Porfavor seleccione una opcion',
     buttons: buttonss,
     headerType: 1
 }
@@ -3624,7 +3626,7 @@ break
 		case 'gimage':
 case 'googleimage':
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
-if (args.length < 1) return reply('What do you want to search?')
+if (args.length < 1) return reply('Que estas buscando?')
 sticWait(from)
 teks = args.join(' ')
 res = await googleImage(teks, google)
@@ -3633,7 +3635,7 @@ if (error){ return reply('_[ ! ] Api Error Or Result Not Found_')}
 else {
 var gugIm = result
 var random =  gugIm[Math.floor(Math.random() * gugIm.length)].url
-sendFileFromUrl(random, image, {quoted: mek, caption: `*Search Results From :* ${teks}`})
+sendFileFromUrl(random, image, {quoted: mek, caption: `*Resultados de:* ${teks}`})
 }
 }
 break
@@ -4458,40 +4460,40 @@ if (!isOwner && !mek.key.fromMe) return sticOwner(from)
 					break
 				case 'suit':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
-  if (args.length < 1) return reply('Choose scissors/rock/paper')
-					if (args[0] === 'scissors' ) {
+  if (args.length < 1) return reply('Elije Tijeras/Piedra/Papel')
+					if (args[0] === 'Tijeras' ) {
 					  gunting = [
-					    "You *Scissors*\nMe *Paper*\nYou Win 😔",
-					    "You *Scissors*\nMe *Rock*\nYou Lose 🙂",
-					    "You *Scissors*\nMe *Scissors*\nWe Draw 😏"
+					    "Tu *Tijeras*\nYo *Papel*\nTu ganas 😔",
+					    "Tu *Tijeras*\nYo *Piedra*\nTu pierdes 🙂",
+					    "Tu *Tijeras*\nYo *Tijeras*\nEmpate 😏"
 					    ]
 					  gun = gunting[Math.floor(Math.random() * gunting.length)]
 					  reply(gun)
-					} else if (args[0] === 'paper') {
+					} else if (args[0] === 'Papel') {
 					  ker = [
-					    "You *Paper*\nMe *Rock*\nYou Win 😔",
-					    "You *Paper*\nMe *Scissors*\nYou Lose 🙂",
-					    "You *Paper*\nMe *Paper*\nWe Draw 😏"
+					    "Tu *Paper*\nYo *Piedra*\nTu ganas 😔",
+					    "Tu *Paper*\nYo *Tijeras*\nTu pierdes 🙂",
+					    "Tu *Paper*\nYo *Papel*\nEmpate 😏"
 					    ]
 					  kertas = ker[Math.floor(Math.random() * ker.length)]
 						reply(kertas)
-					} else if (args[0] === 'rock') {
+					} else if (args[0] === 'Piedra') {
 					  bat = [
-					    "You *Rock*\nMe *Scissors*\nYou Win ??",
-					    "You *Rock*\nMe *Paper*\nYou Lose 🙂",
-					    "You *Rock*\nMe *Rock*\nWe are Draw 😏"
+					    "Tu *Piedra*\nYo *Tijeras*\nTu ganas 😔",
+					    "Tu *Piedra*\nYo *Papel*\nTu pierdes 🙂",
+					    "Tu *Piedra*\nYo *Piedra*\nEmpate 😏"
 					    ]
 					  batu = bat[Math.floor(Math.random() * bat.length)]
 					  reply(batu)
 					} else {
-					  reply('Choose scissors/rock/paper')
+					  reply('Elije Tijeras/Piedra/Papel')
 					}
 break
 		    case 'slot':
             case 'slots':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
             const somtoy = sotoy[Math.floor(Math.random() * sotoy.length)]
-            alpha.sendMessage(from, `[  🎰 | SLOTS ]\n-----------------\n🍋 : 🍌 : 🍍\n${somtoy}<=====\n🍋 : 🍌 : 🍍\n[  🎰 | SLOTS ]\n\nDescription: If you get 3 of the same fruit, it means you win\n\nExample : 🍌 : 🍌 : 🍌<=====`, MessageType.text, { quoted: mek })
+            alpha.sendMessage(from, `[  🎰 | TRAGAMONEDAS ]\n-----------------\n🍋 : 🍌 : 🍍\n${somtoy}<=====\n🍋 : 🍌 : 🍍\n[  🎰 | TRAGAMONEDAS ]\n\n*Descripción:* Si obtienes 3 de la misma fruta, significa que ganas.\n\n*Ejemplo:* 🍌 : 🍌 : 🍌<=====`, MessageType.text, { quoted: mek })
             break
 				case 'scontact':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
@@ -5525,7 +5527,7 @@ ytmp4 => Video`, contextInfo: { forwardingScore: 508, isForwarded: true, externa
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
 					const timestampi = speed();
 					const latensyi = speed() - timestampi
-					reply(`Speed: ${latensyi.toFixed(4)} Second`)
+					reply(`Velocidad: ${latensyi.toFixed(4)} p/segundo`)
 					break
 				case 'return':
 				if (!isOwner) return sticOwner(from)
@@ -5814,16 +5816,16 @@ if (budy.startsWith('Y')){
   tto = ky_ttt.filter(ghg => ghg.id.includes(from))
   tty = tto[0]
   angka = tto[0].angka
-  ucapan = `*🎳 Game Tictactoe 🎲*
+  ucapan = `*🎳 Juego TicTacToe 🎲*
 
-Player1 @${tty.player1.split('@')[0]}=❌
-Player2 @${tty.player2.split('@')[0]}=⭕
+*👤Jugador 1:* @${tty.player1.split('@')[0]}=❌
+*👤Jugador 2:* @${tty.player2.split('@')[0]}=⭕
 
 ${angka[1]}${angka[2]}${angka[3]}
 ${angka[4]}${angka[5]}${angka[6]}
 ${angka[7]}${angka[8]}${angka[9]}
 
-Turn = @${tty.player1.split('@')[0]}`
+*Turno de:* @${tty.player1.split('@')[0]}`
   alpha.sendMessage(from, ucapan, text, {quoted: mek, contextInfo:{mentionedJid: [tty.player1,tty.player2]}})
   }
 if (budy.startsWith('N')){
@@ -5838,10 +5840,10 @@ alpha.sendMessage(from, `Yah @${tty.player2.split('@')[0]} Reject:(`,text,{quote
 if (isTTT && isPlayer1){
 nuber = parseInt(budy)
 if (isNaN(nuber)) return
-if (nuber < 1 || nuber > 9) return reply('Enter Numbers Correctly')
+if (nuber < 1 || nuber > 9) return reply('Introduce los numeros correctamente.')
 main = ky_ttt.filter(hjh => hjh.id.includes(from)) 
-if (!tttawal.includes(main[0].angka[nuber])) return reply('Its already filled, the other contents, bro')
-if (main[0].gilir.includes(sender)) return reply('Wait your turn bro')
+if (!tttawal.includes(main[0].angka[nuber])) return reply('La casilla ya esta seleccionada, elija otra.')
+if (main[0].gilir.includes(sender)) return reply('Espera tu turno.')
 s = '❌'
 main[0].angka[nuber] = s
 main[0].gilir = main[0].player1
@@ -5855,12 +5857,12 @@ angka = tto[0].angka
 ttt = `${angka[1]}${angka[2]}${angka[3]}\n${angka[4]}${angka[5]}${angka[6]}\n${angka[7]}${angka[8]}${angka[9]}`
 
 ucapmenang = () => {
-ucapan1 = `*🎳Result Game Tictactoe 🎲
+ucapan1 = `*🎳 Resultado del Juego TicTacToe 🎲*
 
-*Yeyyy Game Won By *@${tty.player1.split('@')[0]}*\n`
-ucapan2 = `*🎳Result Game Tictactoe 🎲*
+Ganador *@${tty.player1.split('@')[0]}* Felicidades🎉\n`
+ucapan2 = `*🎳 Resultado del Juego TicTacToe 🎲*
 
-*The final result:*
+*El resultado final:*
 
 ${ttt}`
 alpha.sendMessage(from, ucapan1, text, {quoted:mek, contextInfo:{mentionedJid: [tty.player1]}})
@@ -5887,35 +5889,35 @@ if (angka[3] == s && angka[6] == s && angka[9] == s) return ucapmenang()
 if (!ttt.includes('1️⃣') && !ttt.includes('2️⃣') && !ttt.includes('3️⃣') && ! ttt.includes('4️⃣') && !
 ttt.includes('5️⃣') && !
 ttt.includes('6️⃣') && ! ttt.includes('7️⃣') && ! ttt.includes('8️⃣') && ! ttt.includes('9️⃣')){
-ucapan1 = `*🎳 Result Game Tictactoe 🎲*
+ucapan1 = `*🎳 Resultado del Juego TicTacToe 🎲*
 
-*_Series Games 🗿👌_*`
-ucapan2 = `*🎳 Result Game Tictactoe 🎲*
+*_Opa empate 🗿_*`
+ucapan2 = `*🎳 Resultado del Juego TicTacToe 🎲*
 
-*The final result:*
+*Resultado final:*
 
 ${ttt}`
 reply(ucapan1)
 naa = ky_ttt.filter(hhg => !hhg.id.includes(from))
 return ky_ttt = naa
 }
-ucapan = `*🎳 Game Tictactoe 🎲*
+ucapan = `*🎳 Juego TicTacToe 🎲*
 
-Player2 @${tty.player2.split('@')[0]}=⭕
-Player1 @${tty.player1.split('@')[0]}=❌
+*👤Jugador 1:* @${tty.player2.split('@')[0]}=⭕
+*👤Jugador 2:* @${tty.player1.split('@')[0]}=❌
 
 ${ttt}
 
-Turn = @${tty.player2.split('@')[0]}`
+*Turno de:* @${tty.player2.split('@')[0]}`
  alpha.sendMessage(from, ucapan, text, {quoted: mek, contextInfo:{mentionedJid: [tty.player1,tty.player2]}})
 }
 if (isTTT && isPlayer2){
 nuber = parseInt(budy)
 if (isNaN(nuber)) return
-if (nuber < 1 || nuber > 9) return reply('Enter Numbers Correctly')
+if (nuber < 1 || nuber > 9) return reply('Introduce los numeros correctamente.')
 main = ky_ttt.filter(hjh => hjh.id.includes(from)) 
-if (!tttawal.includes(main[0].angka[nuber])) return reply('Its already filled, the other contents, bro')
-if (main[0].gilir.includes(sender)) return reply('Wait your turn bro')
+if (!tttawal.includes(main[0].angka[nuber])) return reply('La casilla ya esta seleccionada, elija otra.')
+if (main[0].gilir.includes(sender)) return reply('Espera tu turno.')
 s = '⭕'
 main[0].angka[nuber] = s
 main[0].gilir = main[0].player2
@@ -5929,12 +5931,12 @@ angka = tto[0].angka
 ttt = `${angka[1]}${angka[2]}${angka[3]}\n${angka[4]}${angka[5]}${angka[6]}\n${angka[7]}${angka[8]}${angka[9]}`
 
 ucapmenang = () => {
-ucapan1 = `*?? Result Game Tictactoe 🎲*
+ucapan1 = `*🎳 Resultado del Juego TicTacToe 🎲*
 
 Yeyyy Game Won By *@${tty.player2.split('@')[0]}*\n`
-ucapan2 = `*🎳 Game Tictactoe 🎲*
+ucapan2 = `*🎳 Resultado del Juego TicTacToe 🎲*
 
-*The final result:*
+*Resultado final:*
 
 ${ttt}`
 alpha.sendMessage(from, ucapan1, text, {quoted:mek, contextInfo:{mentionedJid: [tty.player2]}})
@@ -5953,26 +5955,26 @@ if (angka[3] == s && angka[6] == s && angka[9] == s) return ucapmenang()
 if (!ttt.includes('1️⃣') && !ttt.includes('2️⃣') && !ttt.includes('3️⃣') && ! ttt.includes('4️⃣') && !
 ttt.includes('5️⃣') && !
 ttt.includes('6️⃣') && ! ttt.includes('7️⃣') && ! ttt.includes('8️⃣') && ! ttt.includes('9️⃣')){
-ucapan1 = `*🎳Result Game Tictactoe 🎲*
+ucapan1 = `*🎳 Resultado del Juego TicTacToe 🎲*
 
-*_Series Games🗿👌*`
-ucapan2 = `*🎳 Result Game Tictactoe 🎲*
+*_Opa empate🗿_*`
+ucapan2 = `*🎳 Resultado del Juego TicTacToe 🎲*
 
-*The final result:*
+*Resultado final:*
 
 ${ttt}`
 reply(ucapan1)
 naa = ky_ttt.filter(hhg => !hhg.id.includes(from))
 return ky_ttt = naa
 }
-ucapan = `*🎳 Game Tictactoe 🎲*
+ucapan = `*🎳 Juego TicTacToe 🎲*
 
-Player1 @${tty.player1.split('@')[0]}=⭕
-Player2 @${tty.player2.split('@')[0]}=❌
+*👤Jugador 1:* @${tty.player1.split('@')[0]}=⭕
+*👤Jugador 2:* @${tty.player2.split('@')[0]}=❌
 
 ${ttt}
  
-Turn = @${tty.player1.split('@')[0]}`
+*Turno de:* @${tty.player1.split('@')[0]}`
  alpha.sendMessage(from, ucapan, text, {quoted: mek, contextInfo:{mentionedJid: [tty.player1,tty.player2]}})
  }
 	} catch (e) {
